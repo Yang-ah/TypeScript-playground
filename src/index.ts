@@ -46,6 +46,22 @@ class Dict {
 /* new dictionary */
 const menu = new Dict();
 
-/* new word */
-const iceAmericano = new Word("Ice Americano", "얼음을 넣은 아메리카노");
-const hotAmericano = new Word("Hot Americano", "따뜻한 아메리카노");
+/* declare new word */
+const espresso = new Word("Espresso", "에스프레소");
+const americano = new Word("Americano", "아메리카노");
+const caffeLatte = new Word("Caffe Latte", "카페라떼");
+const vanillaLatte = new Word("Vanilla Latte", "바닐라라떼");
+const hazelnutLatte = new Word("Hazelnut Latte", "헤이즐넛라떼");
+const malchaLatte = new Word("Malcha Latte", "말차라떼");
+const chocolateLatte = new Word("Chocolate Latte", "초코라떼");
+const milkTea = new Word("Milk Tea", "밀크티");
+
+/* add words*/
+menu.add(espresso);
+menu.add(americano);
+menu.add(caffeLatte);
+menu.add(vanillaLatte);
+menu.add(hazelnutLatte);
+menu.add(malchaLatte);
+menu.add(chocolateLatte);
+menu.add(milkTea);
