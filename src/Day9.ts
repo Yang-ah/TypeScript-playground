@@ -20,6 +20,8 @@ class LocalStorage<T> {
 
 const stringStorage = new LocalStorage<string>();
 stringStorage.get("ket");
+stringStorage.set("hello", "how are you");
 
 const booleanStorage = new LocalStorage<boolean>();
 booleanStorage.get("xxx");
+booleanStorage.set("hi", true);
