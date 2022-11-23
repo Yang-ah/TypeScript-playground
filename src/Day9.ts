@@ -1,27 +1,26 @@
-interface SStorage<T> {
+interface IStorage<T> {
   [key: string]: T;
 }
 
 class LocalStorage<T> {
-  private storage: SStorage<T> = {};
-  set(key: string, value: T) {
+  private storage: IStorage<T> = {};
+
+  setItem(key: string, value: T) {
     this.storage[key] = value;
   }
-  remove(key: string) {
-    delete this.storage[key];
-  }
-  get(key: string): T {
+  getItem(key: string): T {
     return this.storage[key];
+  }
+  clearItem(key: string) {
+    delete this.storage[key];
   }
   clear() {
     this.storage = {};
   }
 }
 
-const stringStorage = new LocalStorage<string>();
-stringStorage.get("ket");
-stringStorage.set("hello", "how are you");
-
-const booleanStorage = new LocalStorage<boolean>();
-booleanStorage.get("xxx");
-booleanStorage.set("hi", true);
+const localStorage = new LocalStorage<string>();
+localStorage.setItem("apple", "yummy");
+localStorage.getItem("apple");
+localStorage.clearItem("apple");
+localStorage.clear();
